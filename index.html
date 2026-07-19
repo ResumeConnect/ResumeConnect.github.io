@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Resume Upload Portal | Get Hired Faster</title>
+
+<meta name="description"
+content="Upload your Resume or CV without Signup and get job opportunities on WhatsApp.">
+
+<meta name="keywords"
+content="Resume Upload,CV Upload,Jobs,WhatsApp Jobs,Career">
+
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+rel="stylesheet">
+
+<link rel="stylesheet"
+href="style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- Loading Screen -->
+
+
+
+<!-- Navigation -->
+
+<header>
+
+<nav class="navbar">
+
+<div class="logo">
+
+<i class="fa-solid fa-file-arrow-up"></i>
+
+<span>ResumeConnect</span>
+
+</div>
+
+<ul>
+
+<li><a href="#">Home</a></li>
+
+<li><a href="#upload">Upload</a></li>
+
+<li><a href="#features">Features</a></li>
+
+<li><a href="#faq">FAQ</a></li>
+
+<li><a href="#contact">Contact</a></li>
+
+</ul>
+
+</nav>
+
+</header>
+
+<!-- Hero Section -->
+
+<section class="hero">
+
+<div class="hero-left">
+
+<h1>
+
+Upload Your Resume
+
+<span>Get Hired Faster</span>
+
+</h1>
+
+<p>
+
+No Signup.
+
+No Login.
+
+Just upload your Resume and receive job updates on WhatsApp.
+
+</p>
+
+<div class="hero-buttons">
+
+<a href="#upload"
+class="primary-btn">
+
+Upload Resume
+
+</a>
+
+<a href="#features"
+class="secondary-btn">
+
+Learn More
+
+</a>
+
+</div>
+
+</div>
+
+<div class="hero-right">
+
+<img
+src="assets/hero.svg"
+alt="Resume Illustration">
+
+</div>
+
+</section>
+
+<!-- Upload Section -->
+
+<section
+id="upload"
+class="upload-section">
+
+<div class="upload-card">
+
+<h2>
+
+Upload Resume / CV
+
+</h2>
+
+<p>
+
+Supported Files
+
+PDF
+
+DOC
+
+DOCX
+
+(Max 10MB)
+
+</p>
+
+<div
+id="dropArea"
+class="drop-area">
+
+<i
+class="fa-solid fa-cloud-arrow-up"></i>
+
+<h3>
+
+Drag & Drop Resume
+
+</h3>
+
+<p>
+
+or
+
+</p>
+
+<label
+for="resume">
+
+Choose File
+
+</label>
+
+<input
+type="file"
+id="resume"
+
+accept=".pdf,.doc,.docx"
+
+hidden>
+
+</div>
+
+<div class="selected-file">
+
+<span id="fileName">
+
+No file selected
+
+</span>
+
+</div>
+
+<div class="form-group">
+
+<label>
+
+WhatsApp Number
+
+</label>
+
+<input
+
+type="tel"
+
+id="whatsapp"
+
+placeholder="+91 9876543210"
+
+required>
+
+</div>
+
+<div class="form-group">
+
+<label>
+
+Full Name (Optional)
+
+</label>
+
+<input
+
+type="text"
+
+id="fullname"
+
+placeholder="Enter your name">
+
+</div>
+
+<button
+id="uploadBtn">
+
+<i class="fa-solid fa-paper-plane"></i>
+
+Upload Resume
+
+</button>
+
+<div
+class="progress-box">
+
+<div
+id="progressBar">
+
+</div>
+
+</div>
+
+<p
+id="status">
+
+Waiting for upload...
+
+</p>
+
+</div>
+
+</section>
+
+<!-- Features section starts in Part 2 -->
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
+<!-- =========================
+     FEATURES SECTION
+========================= -->
+<section id="features" class="features">
+
+    <div class="section-title">
+        <h2>Why Choose ResumeConnect?</h2>
+        <p>Your resume reaches recruiters quickly and securely.</p>
+    </div>
+
+    <div class="feature-grid">
+
+        <div class="feature-card">
+            <i class="fa-solid fa-shield-halved"></i>
+            <h3>Secure Upload</h3>
+            <p>Your resume is stored securely in Google Drive.</p>
+        </div>
+
+        <div class="feature-card">
+            <i class="fa-solid fa-bolt"></i>
+            <h3>Fast Processing</h3>
+            <p>Submit your CV within seconds.</p>
+        </div>
+
+        <div class="feature-card">
+            <i class="fa-brands fa-whatsapp"></i>
+            <h3>WhatsApp Updates</h3>
+            <p>Receive job opportunities directly on WhatsApp.</p>
+        </div>
+
+        <div class="feature-card">
+            <i class="fa-solid fa-users"></i>
+            <h3>Recruiter Access</h3>
+            <p>Your profile becomes available to recruiters.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================
+     HOW IT WORKS
+========================= -->
+
+<section class="steps">
+
+    <div class="section-title">
+
+        <h2>How It Works</h2>
+
+    </div>
+
+    <div class="steps-grid">
+
+        <div class="step">
+            <span>1</span>
+            <h3>Select Resume</h3>
+            <p>Choose your Resume or CV.</p>
+        </div>
+
+        <div class="step">
+            <span>2</span>
+            <h3>Enter WhatsApp</h3>
+            <p>Add your WhatsApp number.</p>
+        </div>
+
+        <div class="step">
+            <span>3</span>
+            <h3>Upload</h3>
+            <p>Your resume is uploaded to Google Drive.</p>
+        </div>
+
+        <div class="step">
+            <span>4</span>
+            <h3>Get Job Updates</h3>
+            <p>Recruiters contact you on WhatsApp.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================
+     STATS
+========================= -->
+
+<section class="stats">
+
+<div class="stat">
+<h2>5000+</h2>
+<p>Resumes Uploaded</p>
+</div>
+
+<div class="stat">
+<h2>1000+</h2>
+<p>Recruiters</p>
+</div>
+
+<div class="stat">
+<h2>95%</h2>
+<p>Success Rate</p>
+</div>
+
+<div class="stat">
+<h2>24×7</h2>
+<p>Availability</p>
+</div>
+
+</section>
+
+<!-- =========================
+     FAQ
+========================= -->
+
+<section id="faq" class="faq">
+
+<div class="section-title">
+
+<h2>Frequently Asked Questions</h2>
+
+</div>
+
+<div class="faq-item">
+<h3>Is signup required?</h3>
+<p>No. You can upload directly without creating an account.</p>
+</div>
+
+<div class="faq-item">
+<h3>Which file types are accepted?</h3>
+<p>PDF, DOC and DOCX files up to 10 MB.</p>
+</div>
+
+<div class="faq-item">
+<h3>How will I receive job updates?</h3>
+<p>Through your WhatsApp number.</p>
+</div>
+
+<div class="faq-item">
+<h3>Where is my resume stored?</h3>
+<p>Securely in Google Drive.</p>
+</div>
+
+</section>
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section id="contact" class="contact">
+
+<div class="section-title">
+
+<h2>Need Help?</h2>
+
+<p>We're here to assist you.</p>
+
+</div>
+
+<a href="https://wa.me/919876543210" class="primary-btn">
+
+<i class="fa-brands fa-whatsapp"></i>
+
+Contact Support
+
+</a>
+
+</section>
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+<div class="footer-logo">
+
+ResumeConnect
+
+</div>
+
+<p>
+
+© 2026 ResumeConnect. All Rights Reserved.
+
+</p>
+
+<div class="footer-links">
+
+<a href="privacy.html">Privacy Policy</a>
+
+<a href="terms.html">Terms & Conditions</a>
+
+</div>
+
+</footer>
+
+<button id="backToTop">
+
+<i class="fa-solid fa-arrow-up"></i>
+
+</button>
