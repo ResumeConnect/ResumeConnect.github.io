@@ -157,31 +157,64 @@ const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzEHkP7wo1v-GsuDGJZG
    Real Upload
 ------------------------------ */
 
-const reader = new FileReader();
+async function uploadResume() {
 
-reader.onload = async function () {
+    if (!selectedFile) {
+        alert("Please select your resume.");
+        return;
+    }
 
-    const base64 = reader.result.split(",")[1];
+    if (!validateWhatsapp()) {
+        alert("Enter a valid WhatsApp number.");
+        whatsapp.focus();
+        return;
+    }
 
-    const formData = new FormData();
+    uploadBtn.disabled = true;
+    statusText.textContent = "Uploading...";
+    progressBar.style.width = "10%";
 
-    formData.append("name", fullName.value);
-    formData.append("whatsapp", whatsapp.value);
-    formData.append("fileData", base64);
-    formData.append("fileName", selectedFile.name);
-    formData.append("mimeType", selectedFile.type);
+    const reader = new FileReader();
 
-    const response = await fetch(SCRIPT_URL, {
-        method: "POST",
-        body: formData
-    });
+    reader.onload = async function () {
 
-    const result = await response.json();
+        try {
 
-    console.log(result);
-};
+            const base64 = reader.result.split(",")[1];
 
-reader.readAsDataURL(selectedFile);
+            const formData = new FormData();
+
+            formData.append("name", fullName.value);
+            formData.append("whatsapp", whatsapp.value);
+            formData.append("fileData", base64);
+            formData.append("fileName", selectedFile.name);
+            formData.append("mimeType", selectedFile.type);
+
+            const response = await fetch(SCRIPT_URL, {
+                method: "POST",
+                body: formData
+            });
+
+            const result = await response.json();
+
+            if (result.success) {
+                progressBar.style.width = "100%";
+                statusText.textContent = "Resume uploaded successfully!";
+                alert("✅ Resume uploaded successfully!");
+            } else {
+                alert(result.message);
+            }
+
+        } catch (err) {
+            console.error(err);
+            alert("Upload failed.");
+        }
+
+        uploadBtn.disabled = false;
+    };
+
+    reader.readAsDataURL(selectedFile);
+}
 
    
 /* ------------------------------
