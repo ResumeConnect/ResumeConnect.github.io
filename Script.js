@@ -208,15 +208,31 @@ const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzEHkP7wo1v-GsuDGJZG
    Real Upload
 ------------------------------ */
 
-async function uploadResume(){
+const reader = new FileReader();
 
-    if(!selectedFile){
+reader.onload = async function () {
 
-        alert("Please select your resume.");
+    const base64 = reader.result.split(",")[1];
 
-        return;
+    const formData = new FormData();
 
-    }
+    formData.append("name", fullName.value);
+    formData.append("whatsapp", whatsapp.value);
+    formData.append("fileData", base64);
+    formData.append("fileName", selectedFile.name);
+    formData.append("mimeType", selectedFile.type);
+
+    const response = await fetch(SCRIPT_URL, {
+        method: "POST",
+        body: formData
+    });
+
+    const result = await response.json();
+
+    console.log(result);
+};
+
+reader.readAsDataURL(selectedFile);
 
     if(!validateWhatsapp()){
 
