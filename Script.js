@@ -202,7 +202,7 @@ backToTop.addEventListener("click",()=>{
 ========================================== */
 
 const SCRIPT_URL =
-"https://script.google.com/macros/s/YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL/exec";
+"https://script.google.com/macros/s/AKfycbwdH-Sdf9hpP9laGZGUDjCGXL-adP9V_MYkPyALv5kFXZd1NDP4b7bwfFwN6P9g1RB7/exec";
 
 /* ------------------------------
    Real Upload
