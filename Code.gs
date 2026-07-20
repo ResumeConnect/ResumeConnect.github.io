@@ -2,7 +2,7 @@
    ResumeConnect - Code.gs
 ========================================== */
 
-const DRIVE_FOLDER_ID = "YOUR_GOOGLE_DRIVE_FOLDER_ID";
+const DRIVE_FOLDER_ID = "1Zs4flsGAumTVgw4NwsdDISGYQGzwyzgN";
 const SHEET_NAME = "Applicants";
 
 function doPost(e) {
