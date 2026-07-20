@@ -5,19 +5,6 @@
 const dropArea = document.getElementById("dropArea");
 const fileInput = document.getElementById("resume");
 const fileName = document.getElementById("fileName");
-fileInput.addEventListener("change", function () {
-
-    if (this.files.length > 0) {
-
-        fileName.textContent = this.files[0].name;
-
-    } else {
-
-        fileName.textContent = "No file selected";
-
-    }
-
-});
 const uploadBtn = document.getElementById("uploadBtn");
 const progressBar = document.getElementById("progressBar");
 const statusText = document.getElementById("status");
