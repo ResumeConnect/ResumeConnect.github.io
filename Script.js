@@ -117,56 +117,7 @@ function validateWhatsapp(){
    Fake Upload Progress
    (Real upload comes in Part 4B)
 ------------------------------ */
-
-uploadBtn.addEventListener("click", () => {
-
-    if(!selectedFile){
-
-        alert("Please choose your Resume.");
-
-        return;
-
-    }
-
-    if(!validateWhatsapp()){
-
-        alert("Enter a valid WhatsApp number.");
-
-        whatsapp.focus();
-
-        return;
-
-    }
-
-    progressBar.style.width = "0%";
-
-    statusText.innerHTML = "Preparing upload...";
-
-    let progress = 0;
-
-    const timer = setInterval(() => {
-
-        progress += 5;
-
-        progressBar.style.width = progress + "%";
-
-        statusText.innerHTML =
-
-        "Uploading... " + progress + "%";
-
-        if(progress >= 100){
-
-            clearInterval(timer);
-
-            statusText.innerHTML =
-
-            "Ready to send to Google Drive...";
-
-        }
-
-    },120);
-
-});
+uploadBtn.addEventListener("click", uploadResume);
 
 /* ------------------------------
    Back To Top
