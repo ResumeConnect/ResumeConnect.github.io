@@ -195,7 +195,15 @@ async function uploadResume() {
                 body: formData
             });
 
-            const result = await response.json();
+            const response = await fetch(SCRIPT_URL, {
+    method: "POST",
+    body: formData
+});
+
+const text = await response.text();
+console.log(text);
+
+const result = JSON.parse(text);
 
             if (result.success) {
                 progressBar.style.width = "100%";
@@ -220,12 +228,4 @@ async function uploadResume() {
 /* ------------------------------
    Replace old upload click
 ------------------------------ */
-
-uploadBtn.onclick = uploadResume;
-
-console.log("Script loaded");
-
-uploadBtn.onclick = function () {
-    alert("Button clicked");
-    uploadResume();
-};
+uploadBtn.addEventListener("click", uploadResume);
