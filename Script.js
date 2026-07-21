@@ -222,3 +222,10 @@ async function uploadResume() {
 ------------------------------ */
 
 uploadBtn.onclick = uploadResume;
+
+console.log("Script loaded");
+
+uploadBtn.onclick = function () {
+    alert("Button clicked");
+    uploadResume();
+};
