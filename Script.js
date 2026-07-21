@@ -196,11 +196,6 @@ async function uploadResume() {
                 body: formData
             });
 
-            const response = await fetch(SCRIPT_URL, {
-    method: "POST",
-    body: formData
-});
-
 const text = await response.text();
 console.log(text);
 
