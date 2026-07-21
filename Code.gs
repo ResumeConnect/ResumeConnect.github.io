@@ -63,3 +63,7 @@ function doPost(e) {
   }
 
 }
+function doGet() {
+  return ContentService
+    .createTextOutput("ResumeConnect API is running");
+}
