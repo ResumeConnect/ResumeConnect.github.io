@@ -57,12 +57,13 @@ dropArea.addEventListener("click", () => {
 
 fileInput.addEventListener("change", () => {
 
-    if(fileInput.files.length){
+    console.log("Change event fired");
+    console.log(fileInput.files);
 
+    if (fileInput.files.length) {
+        alert("File detected: " + fileInput.files[0].name);
         handleFile(fileInput.files[0]);
-
     }
-
 });
 
 /* ------------------------------
