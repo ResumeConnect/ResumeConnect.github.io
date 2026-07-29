@@ -55,16 +55,16 @@ dropArea.addEventListener("click", function () {
     fileInput.click();
 });
 
-fileInput.onchange = function () {
-
-    if (this.files && this.files.length > 0) {
-
-        selectedFile = this.files[0];
-        handleFile(selectedFile);
-
+fileInput.addEventListener("change", function () {
+    if (!this.files || this.files.length === 0) {
+        fileName.textContent = "No file selected";
+        selectedFile = null;
+        return;
     }
 
-};
+    selectedFile = this.files[0];
+    handleFile(selectedFile);
+});
 
 /* ------------------------------
    Validate File
