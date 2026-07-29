@@ -246,6 +246,16 @@ if (priorityReview && priorityReview.checked) {
     );
 
 }
+document
+.getElementById("paypalBuyBtn")
+.addEventListener("click", function () {
+
+    window.open(
+        "YOUR_PAYPAL_PAYMENT_LINK",
+        "_blank"
+    );
+
+});
    
 /* ------------------------------
    Replace old upload click
