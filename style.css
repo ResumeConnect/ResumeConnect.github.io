@@ -1255,3 +1255,22 @@ footer{
 .paypal-btn:active{
     transform:scale(.97);
 }
+.support-btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    padding:14px 28px;
+    background:#25D366;
+    color:#fff;
+    text-decoration:none;
+    border-radius:12px;
+    font-weight:700;
+    font-size:16px;
+    transition:.3s;
+}
+
+.support-btn:hover{
+    background:#1da851;
+    transform:translateY(-2px);
+}
