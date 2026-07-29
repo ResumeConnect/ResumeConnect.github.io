@@ -220,50 +220,13 @@ const result = JSON.parse(text);
     reader.readAsDataURL(selectedFile);
 }
 
-const priorityReview =
-document.getElementById("priorityReview");
-
-uploadBtn.addEventListener("click", () => {
-
-    if(priorityReview.checked){
-
-        window.location.href =
-        "https://www.paypal.com/ncp/payment/D8X9D4ATE5YLC";
-
-        return;
-    }
 
     uploadResume();
 
 });
-const priorityReview =
-document.getElementById("priorityReview");
-
-if (priorityReview && priorityReview.checked) {
-
-    alert(
-        "Priority Resume Review selected.\nPayment integration coming next."
-    );
-
-}
-document
-.getElementById("paypalBuyBtn")
-.addEventListener("click", function () {
-
-    window.open(
-        "https://www.paypal.com/ncp/payment/D8X9D4ATE5YLC",
-        "_blank"
-    );
 
 });
 
-
-document.getElementById("paypalBuyBtn").addEventListener("click", function () {
-    window.open(
-        "https://www.paypal.com/ncp/payment/D8X9D4ATE5YLC",
-        "_blank"
-    );
-});
 /* ------------------------------
    Replace old upload click
 ------------------------------ */
