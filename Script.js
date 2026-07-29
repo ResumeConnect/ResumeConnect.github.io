@@ -236,6 +236,16 @@ uploadBtn.addEventListener("click", () => {
     uploadResume();
 
 });
+const priorityReview =
+document.getElementById("priorityReview");
+
+if (priorityReview && priorityReview.checked) {
+
+    alert(
+        "Priority Resume Review selected.\nPayment integration coming next."
+    );
+
+}
    
 /* ------------------------------
    Replace old upload click
