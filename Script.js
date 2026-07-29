@@ -51,20 +51,20 @@ dropArea.addEventListener("drop", e => {
 
 });
 
-dropArea.addEventListener("click", () => {
+dropArea.addEventListener("click", function () {
     fileInput.click();
 });
 
-fileInput.addEventListener("change", () => {
+fileInput.onchange = function () {
 
-    console.log("Change event fired");
-    console.log(fileInput.files);
+    if (this.files && this.files.length > 0) {
 
-    if (fileInput.files.length) {
-        alert("File detected: " + fileInput.files[0].name);
-        handleFile(fileInput.files[0]);
+        selectedFile = this.files[0];
+        handleFile(selectedFile);
+
     }
-});
+
+};
 
 /* ------------------------------
    Validate File
