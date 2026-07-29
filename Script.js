@@ -299,6 +299,40 @@ document
     }
 
 }).render("#paypal-button-container");
+
+paypal.Buttons({
+
+    createOrder(data, actions) {
+        return actions.order.create({
+            purchase_units: [{
+                description: "Priority Resume Review",
+                amount: {
+                    value: "99.00"
+                }
+            }]
+        });
+    },
+
+    onApprove(data, actions) {
+        return actions.order.capture().then(function(orderData){
+
+            alert("Payment Successful!");
+
+            // Unlock premium service
+            document.getElementById("premium").value = "true";
+
+            // Upload resume
+            uploadResume();
+
+        });
+    },
+
+    onError(err){
+        console.error(err);
+        alert("Payment Failed");
+    }
+
+}).render("#paypal-button-container");
 /* ------------------------------
    Replace old upload click
 ------------------------------ */
