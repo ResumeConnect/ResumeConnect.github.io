@@ -1193,3 +1193,15 @@ footer{
     width:20px;
     height:20px;
 }
+
+.form-wrapper{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:100%;
+}
+
+.form-wrapper form{
+    width:100%;
+    max-width:500px;
+}
