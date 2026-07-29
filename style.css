@@ -1079,3 +1079,21 @@ footer{
     transform:translateY(-5px);
     background:var(--primary-dark);
    }
+.premium-box{
+    margin:20px 0;
+    padding:18px;
+    border-radius:15px;
+    background:#fff8e1;
+    border:2px solid #fbbf24;
+    text-align:left;
+}
+
+.premium-box h3{
+    margin-bottom:10px;
+}
+
+.premium-box small{
+    display:block;
+    color:#666;
+    margin-top:8px;
+}
