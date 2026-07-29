@@ -221,9 +221,6 @@ const result = JSON.parse(text);
 }
 
 
-   
-});
-
 /* ------------------------------
    Replace old upload click
 ------------------------------ */
