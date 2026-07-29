@@ -333,6 +333,13 @@ paypal.Buttons({
     }
 
 }).render("#paypal-button-container");
+
+document.getElementById("paypalBuyBtn").addEventListener("click", function () {
+    window.open(
+        "https://www.paypal.com/ncp/payment/D8X9D4ATE5YLC",
+        "_blank"
+    );
+});
 /* ------------------------------
    Replace old upload click
 ------------------------------ */
