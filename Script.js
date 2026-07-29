@@ -256,7 +256,49 @@ document
     );
 
 });
-   
+   paypal.Buttons({
+
+    createOrder: function (data, actions) {
+
+        return actions.order.create({
+
+            purchase_units: [{
+                amount: {
+                    value: "99.00"
+                },
+                description: "Priority Resume Review"
+            }]
+
+        });
+
+    },
+
+    onApprove: function (data, actions) {
+
+        return actions.order.capture().then(function (details) {
+
+            alert(
+                "Thank you " +
+                details.payer.name.given_name +
+                "! Payment completed."
+            );
+
+            // Enable premium features here.
+            // Optionally notify your Apps Script backend.
+
+        });
+
+    },
+
+    onError: function (err) {
+
+        console.error(err);
+
+        alert("Payment failed. Please try again.");
+
+    }
+
+}).render("#paypal-button-container");
 /* ------------------------------
    Replace old upload click
 ------------------------------ */
