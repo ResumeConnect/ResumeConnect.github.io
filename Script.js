@@ -221,10 +221,7 @@ const result = JSON.parse(text);
 }
 
 
-    uploadResume();
-
-});
-
+   
 });
 
 /* ------------------------------
