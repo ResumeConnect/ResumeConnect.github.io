@@ -220,6 +220,22 @@ const result = JSON.parse(text);
     reader.readAsDataURL(selectedFile);
 }
 
+const priorityReview =
+document.getElementById("priorityReview");
+
+uploadBtn.addEventListener("click", () => {
+
+    if(priorityReview.checked){
+
+        window.location.href =
+        "YOUR_PAYPAL_OR_RAZORPAY_LINK";
+
+        return;
+    }
+
+    uploadResume();
+
+});
    
 /* ------------------------------
    Replace old upload click
