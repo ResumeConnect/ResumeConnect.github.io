@@ -228,7 +228,7 @@ uploadBtn.addEventListener("click", () => {
     if(priorityReview.checked){
 
         window.location.href =
-        "YOUR_PAYPAL_OR_RAZORPAY_LINK";
+        "https://www.paypal.com/ncp/payment/D8X9D4ATE5YLC";
 
         return;
     }
@@ -251,7 +251,7 @@ document
 .addEventListener("click", function () {
 
     window.open(
-        "YOUR_PAYPAL_PAYMENT_LINK",
+        "https://www.paypal.com/ncp/payment/D8X9D4ATE5YLC",
         "_blank"
     );
 
@@ -264,7 +264,7 @@ document
 
             purchase_units: [{
                 amount: {
-                    value: "99.00"
+                    value: "5.00 USD"
                 },
                 description: "Priority Resume Review"
             }]
