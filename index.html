@@ -267,7 +267,132 @@ Waiting for upload...
 </section>
     
 <!-- Features section starts in Part 2 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Employer Resume Target</title>
 
+<style>
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+        font-family:Arial, sans-serif;
+    }
+
+    body{
+        background:#f4f6f9;
+        padding:40px;
+    }
+
+    .container{
+        max-width:500px;
+        margin:auto;
+        background:#fff;
+        padding:25px;
+        border-radius:10px;
+        box-shadow:0 5px 15px rgba(0,0,0,.1);
+    }
+
+    h2{
+        margin-bottom:20px;
+        color:#333;
+    }
+
+    select{
+        width:100%;
+        padding:12px;
+        border:1px solid #ccc;
+        border-radius:6px;
+        font-size:16px;
+        cursor:pointer;
+    }
+
+    .result{
+        display:none;
+        margin-top:20px;
+        padding:20px;
+        background:#eef7ff;
+        border-left:5px solid #007bff;
+        border-radius:6px;
+    }
+
+    .result h3{
+        color:#007bff;
+        margin-bottom:10px;
+    }
+
+    .range{
+        font-size:22px;
+        font-weight:bold;
+        color:#28a745;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h2>Select Employer</h2>
+
+    <select id="employerSelect">
+        <option value="">-- Choose Employer --</option>
+        <option value="google">Google</option>
+        <option value="amazon">Amazon</option>
+        <option value="microsoft">Microsoft</option>
+        <option value="apple">Apple</option>
+    </select>
+
+    <div class="result" id="resultBox">
+        <h3 id="companyName"></h3>
+        <p>Resume Target Score</p>
+        <div class="range" id="targetRange"></div>
+    </div>
+
+</div>
+
+<script>
+
+const resumeData = {
+    google: "90 - 100%",
+    amazon: "85 - 95%",
+    microsoft: "88 - 98%",
+    apple: "92 - 100%"
+};
+
+const select = document.getElementById("employerSelect");
+const result = document.getElementById("resultBox");
+const company = document.getElementById("companyName");
+const range = document.getElementById("targetRange");
+
+select.addEventListener("change", function(){
+
+    const employer = this.value;
+
+    if(employer){
+q
+        company.innerHTML =
+            employer.charAt(0).toUpperCase() + employer.slice(1);
+
+        range.innerHTML = resumeData[employer];
+
+        result.style.display = "block";
+
+    }else{
+
+        result.style.display = "none";
+
+    }
+
+});
+
+</script>
+
+</body>
+</html>
 
 <!-- =========================
      FEATURES SECTION
@@ -412,23 +537,7 @@ Waiting for upload...
 </div>
 
 </section>
-      <div class="container">
-    <h2>Select Employer</h2>
-
-    <select id="employerSelect">
-        <option value="">-- Choose Employer --</option>
-        <option value="google">Unique Ad Group</option>
-        <option value="amazon">Meesho</option>
-        <option value="microsoft">Clarity</option>
-        <option value="apple">Technolife</option>
-    </select>
-
-    <div class="result" id="resultBox">
-        <h3 id="companyName"></h3>
-        <p>Resume Target</p>
-        <div class="range" id="targetRange"></div>
-    </div>
-</div>
+    
 
 
 
