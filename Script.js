@@ -17,7 +17,31 @@ let selectedFile = null;
 /* ------------------------------
    Loader
 ------------------------------ */
+const resumeData = {
+    google: "90 - 100%",
+    amazon: "85 - 95%",
+    microsoft: "88 - 98%",
+    apple: "92 - 100%"
+};
 
+const select = document.getElementById("employerSelect");
+const result = document.getElementById("resultBox");
+const company = document.getElementById("companyName");
+const range = document.getElementById("targetRange");
+
+select.addEventListener("change", function () {
+    const employer = this.value;
+
+    if (employer) {
+        company.textContent =
+            employer.charAt(0).toUpperCase() + employer.slice(1);
+
+        range.textContent = resumeData[employer];
+        result.style.display = "block";
+    } else {
+        result.style.display = "none";
+    }
+});
 
 /* ------------------------------
    Drag & Drop
