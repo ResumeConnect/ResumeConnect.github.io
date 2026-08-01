@@ -451,10 +451,10 @@ Waiting for upload...
 <h2>Select Employer</h2>
 <select id="employerSelect">
 <option value="">-- Choose Employer --</option>
-<option value="google">Google</option>
-<option value="amazon">Amazon</option>
-<option value="microsoft">Microsoft</option>
-<option value="apple">Apple</option>
+<option value="google">Clarity</option>
+<option value="amazon">Flipkart</option>
+<option value="microsoft">Blurb</option>
+<option value="apple">ServiceNow</option>
 </select>
 <div class="result" id="resultBox" style="display:none;margin-top:20px;padding:20px;background:#eef7ff;border-left:5px solid #007bff;border-radius:6px;">
 <h3 id="companyName"></h3>
@@ -463,7 +463,7 @@ Waiting for upload...
 </div>
 </section>
 <script>
-const resumeData={google:"90 - 100%",amazon:"85 - 95%",microsoft:"88 - 98%",apple:"92 - 100%"};
+const resumeData={google:"90",amazon:"95",microsoft:"98",apple:"92"};
 const select=document.getElementById("employerSelect");
 const result=document.getElementById("resultBox");
 const company=document.getElementById("companyName");
