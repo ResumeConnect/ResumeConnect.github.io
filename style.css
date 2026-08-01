@@ -1275,3 +1275,62 @@ footer{
     transform:translateY(-2px);
 }
 
+/* Page styling */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f7fc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container */
+.form-box {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    width: 350px;
+}
+
+/* Label */
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Stylish Select Box */
+select {
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 16px;
+    color: #333;
+    border: 2px solid #4CAF50;
+    border-radius: 8px;
+    background: #fff;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+/* Hover Effect */
+select:hover {
+    border-color: #2196F3;
+    box-shadow: 0 0 10px rgba(33,150,243,0.3);
+}
+
+/* Focus Effect */
+select:focus {
+    border-color: #673AB7;
+    box-shadow: 0 0 12px rgba(103,58,183,0.4);
+}
+
+/* Dropdown Options */
+option {
+    padding: 10px;
+}
+
