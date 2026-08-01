@@ -17,31 +17,6 @@ let selectedFile = null;
 /* ------------------------------
    Loader
 ------------------------------ */
-const resumeData = {
-    Unique Ad Group: "30 Resume",
-    Meesho: "20 Resume",
-    Clarity: "50 Resume",
-    Technolife: "94 Resume"
-};
-
-const select = document.getElementById("employerSelect");
-const result = document.getElementById("resultBox");
-const company = document.getElementById("companyName");
-const range = document.getElementById("targetRange");
-
-select.addEventListener("change", function () {
-    const employer = this.value;
-
-    if (employer) {
-        company.textContent =
-            employer.charAt(0).toUpperCase() + employer.slice(1);
-
-        range.textContent = resumeData[employer];
-        result.style.display = "block";
-    } else {
-        result.style.display = "none";
-    }
-});
 
 /* ------------------------------
    Drag & Drop
