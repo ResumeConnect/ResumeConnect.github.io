@@ -18,10 +18,10 @@ let selectedFile = null;
    Loader
 ------------------------------ */
 const resumeData = {
-    google: "90 - 100%",
-    amazon: "85 - 95%",
-    microsoft: "88 - 98%",
-    apple: "92 - 100%"
+    Unique Ad Group: "30 Resume",
+    Meesho: "20 Resume",
+    Clarity: "50 Resume",
+    Technolife: "94 Resume"
 };
 
 const select = document.getElementById("employerSelect");
