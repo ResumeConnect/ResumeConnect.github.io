@@ -151,7 +151,7 @@ backToTop.addEventListener("click",()=>{
    ResumeConnect - script.js (Part 4B)
 ========================================== */
 
-const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwC9K-hF1HpAO-dGKTyWuUtCq7X25aAijKk656rXXMgUbxCH_pXr1DqmGjbtT2dgjK5/exec";
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbz4SscGOZutH2ydArQZXrDAzuLM9DbHrxpK2vsFPq2yviTeoeq-F1BosP5PnbtL9_38/exec";
 
 /* ------------------------------
    Real Upload
