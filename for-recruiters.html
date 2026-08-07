@@ -153,24 +153,64 @@
     <p style="margin-top:8px; font-size:0.9rem">Questions? WhatsApp: +91-8374924746</p>
   </div>
 </section>
-
 <script>
-// Simple form submit - connect to your backend or Google Sheet
-document.getElementById('recruiterForm').addEventListener('submit', function(e){
-  e.preventDefault();
-  const data = new FormData(this);
-  
-  // TODO: Send to your backend API or Google Apps Script
-  console.log(Object.fromEntries(data));
-  
-  // Show success
-  document.getElementById('successMsg').style.display = 'block';
-  this.reset();
-  
-  // Optional: Send to WhatsApp
-  // window.open('https://wa.me/918374924746?text=New recruiter lead: ' + data.get('company'));
+const SCRIPT_URL =
+"https://script.google.com/macros/s/AKfycbzRxfpgIFC9eD73tNHrnuerQmfkpyKU6gSfzJqP368TsG1ebwhgY2KFTmtCJaf55-VU-g/exec";
+
+document
+.getElementById("recruiterForm")
+.addEventListener("submit", async function(e){
+
+    e.preventDefault();
+
+    const btn = this.querySelector("button");
+
+    btn.disabled = true;
+    btn.innerHTML = "Sending...";
+
+    const data = {
+        name:this.name.value,
+        company:this.company.value,
+        email:this.email.value,
+        role:this.role.value
+    };
+
+    try{
+
+        const res = await fetch(SCRIPT_URL,{
+            method:"POST",
+            headers:{
+                "Content-Type":"application/json"
+            },
+            body:JSON.stringify(data)
+        });
+
+        const json = await res.json();
+
+        if(json.success){
+
+            document.getElementById("successMsg").style.display="block";
+
+            this.reset();
+
+        }else{
+
+            alert("Something went wrong.");
+
+        }
+
+    }catch(err){
+
+        alert("Unable to send.");
+
+    }
+
+    btn.disabled=false;
+
+    btn.innerHTML="Send Me Free Resumes";
+
 });
-</script>
+  </script>
 
 </body>
 </html>
